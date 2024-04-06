@@ -87,9 +87,6 @@ jobs:
           git --version
           git config user.name "connapotae"
           git config user.email "connapotae@gmail.com"
-          sed -i -E "s/ghcr.io\/connapotae\/devops-go-example.*$/ghcr.io\/connapotae\/devops-go-example:${GITHUB_SHA}/" kube-gitops/deployment.yml
-          git add .
-          git commit -m "🤖 change docker image version to ${GITHUB_SHA}"
       - name: push changes
         uses: ad-m/github-push-action@master
         with:
