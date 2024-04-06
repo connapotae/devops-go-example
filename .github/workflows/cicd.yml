@@ -33,7 +33,7 @@ jobs:
     # permissions:
     #   contents: read
     #   packages: write
-    #needs: quality-check
+    needs: quality-check
 
     steps:
       - uses: actions/checkout@v3
